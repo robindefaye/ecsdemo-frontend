@@ -23,7 +23,7 @@ case "${NETWORK}" in
     color=Yellow
     ;;
 esac
-
+#testing redeploy
 # Am I on ec2 instances?
 if [[ ${zone} == "unknown" ]]; then
   zone=$(curl -m2 -s http://169.254.169.254/latest/dynamic/instance-identity/document | jq -r '.availabilityZone' | cut -f3 -d-)
